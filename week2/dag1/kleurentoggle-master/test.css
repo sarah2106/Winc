@@ -1,0 +1,89 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(47, 48, 151);
+}
+.nav-sidebar a {
+  text-decoration: none;
+  color: rgb(233, 237, 245);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+.hidden {
+  visibility: hidden;
+}
+.blue {
+  background-color: blue;
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.purple {
+  background-color: purple;
+}
+.orange {
+  background-color: orange;
+}
+.pink{
+  background-color: pink;
+
+}
+.black{
+  background-color: black;
+}
+
+
+.nav-sidebar ul {
+  list-style: none;
+  line-height: 25px;
+  list-style: none;
+  width: 150%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-sidebar {
+  position: fixed;
+  top: 30px;
+  left: 0;
+}
+
+
+}
+li {
+  width: 100px;
+  height: 50px;
+}
+.nav-sidebar ul li {
+  display: block;
+  height: 100%;
+  padding: 0 10px;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+
+.nav-sidebar ul li {
+  display: block;
+  height: 500%;
+  padding: 0 10px;
+  text-transform: uppercase;
+  margin: 10px;
+  border: solid 1px rgb(245, 239, 239);
+}
+
+.btn-toggle-nav {
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+  background-image: url("./menu.png");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+  cursor: pointer;
+}
+

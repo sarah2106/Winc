@@ -1,0 +1,1 @@
+const myArray = ["groen", "blauw", "rood"]
