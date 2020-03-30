@@ -280,3 +280,69 @@ const movies = [
       "https://m.media-amazon.com/images/M/MV5BOTdkYjA4YzAtMjNiZS00OTgyLTg5Y2ItNGIwZGQyMTUzNzFiXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
   }
 ];
+
+console.log(movies);
+const titleMovies = movies.map(function(n) {
+  return n.Title;
+});
+
+showNieuwsteFilms = function() {
+  console.log("nieuwste films clicked");
+};
+
+var text = "<ul class=parent>";
+for (i = 0; i < movies.length; i++) {
+  text +=
+    "<li>" +
+    movies[i].Title +
+    " : " +
+    "</br>" +
+    "<a href= https://www.imdb.com/title/" +
+    movies[i].imdbID +
+    " target=_blank><img src=" +
+    movies[i].Poster +
+    "></a>" +
+    "</li>";
+}
+text += "</ul>";
+document.getElementById("showFilms").innerHTML = text;
+
+filmNameSelected = function() {
+  const filmNameClicked = event.target.id;
+  const filmName = movies.filter(function(x) {
+    const yearNumber = parseInt(x.Year);
+    if (filmNameClicked === "nieuwsteFilms") {
+      if (yearNumber >= 2014) {
+        return x;
+      }
+    } else {
+      if (x.Title.includes(filmNameClicked)) {
+        return x;
+      }
+    }
+  });
+
+  const text = "<ul class=parent>";
+  for (i = 0; i < filmName.length; i++) {
+    text +=
+      "<li>" +
+      filmName[i].Title +
+      " : " +
+      "</br>" +
+      "<a href= https://www.imdb.com/title/" +
+      filmName[i].imdbID +
+      " target=_blank><img src=" +
+      filmName[i].Poster +
+      "></a>" +
+      "</li>";
+  }
+  text += "</ul>";
+  document.getElementById("showFilms").innerHTML = text;
+};
+
+document.addEventListener("DOMContentLoaded", function() {
+  filmButtons = document.querySelectorAll("input");
+  filmButtons.forEach(function(filmButton) {
+    filmButton.addEventListener("click", filmNameSelected);
+  });
+});
