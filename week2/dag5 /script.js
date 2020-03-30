@@ -281,6 +281,7 @@ const movies = [
   }
 ];
 
+// 1
 console.log(movies);
 const titleMovies = movies.map(function(n) {
   return n.Title;
@@ -307,6 +308,7 @@ for (i = 0; i < movies.length; i++) {
 text += "</ul>";
 document.getElementById("showFilms").innerHTML = text;
 
+// film selectie
 filmNameSelected = function() {
   const filmNameClicked = event.target.id;
   const filmName = movies.filter(function(x) {
@@ -322,7 +324,7 @@ filmNameSelected = function() {
     }
   });
 
-  const text = "<ul class=parent>";
+  var text = "<ul class=parent>";
   for (i = 0; i < filmName.length; i++) {
     text +=
       "<li>" +
